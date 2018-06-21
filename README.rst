@@ -44,7 +44,7 @@ swagger-ui distribution. Here's an example in flask:
 
 You may wish to override some of the configuration variables. Included
 is a jinaj2 templated file where you can modify these parameters.
-You can chose to add another route to render this template with your
+You can add another route to render this template with your
 desired configuration like so:
 
 .. code-block:: python
