@@ -10,6 +10,7 @@ static files, and some very basic configuration.
 Getting Started
 ===============
 You can import the swagger_ui_path from the swagger_ui_bundle package like so:
+
 .. code-block:: python
   
     from swagger_ui_bundle import swagger_ui_path
