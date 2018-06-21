@@ -9,7 +9,7 @@ static files, and some very basic configuration.
 
 Getting Started
 ===============
-You can import the swagger_ui path from the swagger_ui_bundle package like so:
+You can import the swagger_ui_path from the swagger_ui_bundle package like so:
 .. code-block:: python
   
     from swagger_ui_bundle import swagger_ui_path
@@ -23,7 +23,7 @@ swagger-ui distribution. Here's an example in flask:
 
 .. code-block:: python
 
-    from swagger_ui_bundle import swagger_ui_files
+    from swagger_ui_bundle import swagger_ui_path
     
     from flask import Flask, Blueprint, send_from_directory, render_template
     
@@ -31,8 +31,8 @@ swagger-ui distribution. Here's an example in flask:
         'swagger_ui',
         __name__,
         static_url_path='',
-        static_folder=swagger_ui_files,
-        template_folder=swagger_ui_files
+        static_folder=swagger_ui_path,
+        template_folder=swagger_ui_path
     )
     
     app = Flask(__name__, static_url_path='')

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from swagger_ui_bundle import swagger_ui_files
+from swagger_ui_bundle import swagger_ui_path
 
 from flask import Flask, Blueprint, send_from_directory, render_template
 
@@ -9,8 +9,8 @@ swagger_bp = Blueprint(
     'swagger_ui',
     __name__,
     static_url_path='',
-    static_folder=swagger_ui_files,
-    template_folder=swagger_ui_files
+    static_folder=swagger_ui_path,
+    template_folder=swagger_ui_path
 )
 
 SWAGGER_UI_CONFIG = {
