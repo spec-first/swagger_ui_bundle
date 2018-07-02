@@ -18,7 +18,7 @@ def read_version(package):
                 return line.split()[-1].strip().strip("'")
 
 
-version = read_version('swagger-ui-bundle')
+version = read_version('swagger_ui_bundle')
 
 install_requires = [
     'Jinja2>=2.0',
@@ -30,6 +30,29 @@ def readme():
         return open('README.rst', encoding='utf-8').read()
     except TypeError:
         return open('README.rst').read()
+
+
+class PyTest(TestCommand):
+
+    """Command to run unit tests after in-place build."""
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = [
+            '-sv',
+            '--pep8',
+            '--flakes',
+            '--cov', 'openapi_spec_validator',
+            '--cov-report', 'term-missing',
+        ]
+        self.test_suite = True
+
+    def run_tests(self):
+        # Importing here, `cause outside the eggs aren't loaded.
+        import pytest
+        errno = pytest.main(self.test_args)
+        sys.exit(errno)
+
 
 setup(
     name='swagger_ui_bundle',
@@ -43,6 +66,13 @@ setup(
     license='Apache License Version 2.0',
     setup_requires=['flake8'],
     install_requires=install_requires,
+    tests_require=[
+        "pytest",
+        "pytest-pep8",
+        "pytest-flakes",
+        "pytest-cov",
+        "tox",
+    ],
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
