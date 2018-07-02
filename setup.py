@@ -61,7 +61,7 @@ setup(
     description='swagger_ui_bundle - swagger-ui files in a pip package',
     long_description=readme(),
     author='Daniel Grossmann-Kavanagh',
-    url='https://github.com/dtkav/swagger-ui-bundle',
+    url='https://github.com/dtkav/swagger_ui_bundle',
     keywords='swagger-ui',
     license='Apache License Version 2.0',
     setup_requires=['flake8'],
