@@ -1,0 +1,30 @@
+language: python
+sudo: false
+matrix:
+  include:
+  - python: 2.7
+  - python: 3.2
+  - python: 3.3
+  - python: 3.4
+  - python: 3.5
+  - python: 3.6
+  - python: nightly
+  - python: pypy3
+  allow_failures:
+  - python: 3.2
+  - python: 3.3
+  - python: nightly
+install:
+- pip install -r requirements.txt
+- pip install -r requirements_dev.txt
+- pip install -e .
+script:
+- python setup.py test
+deploy:
+  provider: pypi
+  user: dtkav
+  password:
+    secure: "MMjzgwFNTNhv92MJ68Q8FNiBhXuEGrzt5hy08yf3j/Mv0bZKcCxmxO/GFk6lGMl4y3kMKIUUwmZzDc5GJfx9gGD3p0GmyFjzjNZlacId5R0B61PhmUSfprNeaXJTbTh0GkHN+GLx0nEvsB1pyz6P6AOWBCAFEbT0V1rQcsrIMpiujkdYlzCD9GWoHGQm06g/XTkfu/Y7HJRnodNWcnvRH2NREzkeI+StnXS2HvGBxS3B5/Qs9gPEoFq8cob2ZGsr1m+LtqyOoGhwgUNE+Au6sg8pT/Oj7bGBitq74CqUKKmgS0CMumUsbcSjUiyzUmSqg+4xBG1hVc4dpaj+JQOQs/OFPFVYLG0uP3EXm6Xt093Gz5LU6/kd42pLzZE0EakVA4ww/lOv4Ist2B/7nHjcOifo0wUMaiVb+G54zuG1ytWd5PSEGYuZ4iegdviwETPLOG111bCxWn703vHNfHFw9tv3Jn+cIeulhP2x/jKUxWqmsWFZnLyuCSZgfw1iVzLXCsb3tIIS9q8Ei8a2pbivTsPXUASWPtNeQfUfP7e4KC0CVxECwOWcNHs9JcqzsrJg5kG/1U8MsocR10a43tQTi3puimGTF07bSpysX6+L4L8Sq58qiZ/2O9hWOvUzLWBOxixEbPF0Pw5wN/T/CeOn2eADf/ZVYVwoFT6JwszbMZg="
+  distributions: sdist bdist_wheel
+  on: 
+tags: true
