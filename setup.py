@@ -62,13 +62,12 @@ setup(
     url='https://github.com/dtkav/swagger_ui_bundle',
     keywords='swagger-ui',
     license='Apache License Version 2.0',
-    setup_requires=['flake8'],
+    setup_requires=['pytest-runner', 'flake8'],
     install_requires=install_requires,
     tests_require=[
         "pytest",
         "pytest-pep8",
         "pytest-flakes",
-        "pytest-cov",
         "tox",
     ],
     classifiers=[
