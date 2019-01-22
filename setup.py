@@ -42,8 +42,6 @@ class PyTest(TestCommand):
             '-sv',
             '--pep8',
             '--flakes',
-            '--cov', 'openapi_spec_validator',
-            '--cov-report', 'term-missing',
         ]
         self.test_suite = True
 
