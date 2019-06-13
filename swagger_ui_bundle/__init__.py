@@ -17,11 +17,11 @@ def get_path(rel):
 
 swagger_ui_2_2_10_path = get_path("vendor/swagger-ui-2.2.10")
 
-swagger_ui_3_20_5_path = get_path("vendor/swagger-ui-3.20.5")
+swagger_ui_3_22_3_path = get_path("vendor/swagger-ui-3.22.3")
 
 # latest major versions
 swagger_ui_2_path = swagger_ui_2_2_10_path
-swagger_ui_3_path = swagger_ui_3_20_5_path
+swagger_ui_3_path = swagger_ui_3_22_3_path
 
 # default to swagger 3
 swagger_ui_path = swagger_ui_3_path
