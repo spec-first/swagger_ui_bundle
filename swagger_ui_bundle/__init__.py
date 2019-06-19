@@ -3,7 +3,7 @@
 import os
 
 __author__ = 'Daniel Grossmann-Kavanagh'
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 
 def get_path(rel):
     return os.path.join(
