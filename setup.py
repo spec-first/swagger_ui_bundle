@@ -41,7 +41,7 @@ class PyTest(TestCommand):
         self.test_args = [
             '-sv',
             '--pep8',
-            '--flakes',
+            '--flake8',
         ]
         self.test_suite = True
 
@@ -67,7 +67,7 @@ setup(
     tests_require=[
         "pytest",
         "pytest-pep8",
-        "pytest-flakes",
+        "pytest-flake8",
         "tox",
     ],
     classifiers=[
