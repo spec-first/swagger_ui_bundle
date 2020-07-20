@@ -55,6 +55,11 @@
         ],
         layout: "StandaloneLayout"
       })
+      {% if initOAuth is defined %}
+      ui.initOAuth(
+        {{ initOAuth|tojson|safe }}
+      )
+      {% endif %}
       // End Swagger UI call region
 
       window.ui = ui
