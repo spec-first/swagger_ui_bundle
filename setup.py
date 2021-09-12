@@ -15,7 +15,7 @@ def read_version(package):
     with open(os.path.join(package, '__init__.py'), 'r') as fd:
         for line in fd:
             if line.startswith('__version__ = '):
-                return line.split()[-1].strip().strip("'")
+                return line.split()[-1].strip().strip("'").strip('"')
 
 
 version = read_version('swagger_ui_bundle')
