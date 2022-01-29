@@ -16,8 +16,8 @@ You can import the swagger_ui_path from the swagger_ui_bundle package like so:
     from swagger_ui_bundle import swagger_ui_path
 
     # or if you need a specific version
-    from swagger_ui_bundle import swagger_ui_2_path
     from swagger_ui_bundle import swagger_ui_3_path
+    from swagger_ui_bundle import swagger_ui_4_path
 
 You can easily serve up this directory as all static files to get the default
 swagger-ui distribution. Here's an example in flask:
