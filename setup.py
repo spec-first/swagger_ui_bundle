@@ -53,10 +53,10 @@ class PyTest(TestCommand):
 
 
 setup(
-    name='swagger_ui_bundle',
+    name='swagger_4_ui_bundle',
     packages=find_packages(),
     version=version,
-    description='swagger_ui_bundle - swagger-ui files in a pip package',
+    description='swagger_4_ui_bundle - swagger-ui files in a pip package',
     long_description=readme(),
     author='Daniel Grossmann-Kavanagh, Bartolomé Sánchez Salado',
     url='https://github.com/bartsanchez/swagger_ui_bundle',
