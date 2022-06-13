@@ -16,11 +16,16 @@
     <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
     <script>
     window.onload = function() {
-      //<editor-fold desc="Changeable Configuration Block">
-
-      // the following lines will be replaced by docker/configurator, when it runs in a docker-container
-      window.ui = SwaggerUIBundle({
+      // Begin Swagger UI call region
+      const ui = SwaggerUIBundle({
         url: "{{ openapi_spec_url }}",
+        {% if urls is defined %}
+        urls: {{ urls|tojson|safe }},
+        {% endif %}
+        validatorUrl: {{ validatorUrl | default('null') }},
+        {% if configUrl is defined %}
+        configUrl: "{{ configUrl }}",
+        {% endif %}
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
@@ -32,7 +37,14 @@
         ],
         layout: "StandaloneLayout"
       });
+      {% if initOAuth is defined %}
+      ui.initOAuth(
+        {{ initOAuth|tojson|safe }}
+      )
+      {% endif %}
+      // End Swagger UI call region
+      window.ui = ui;
     };
-    </script/
+  </script>
   </body>
 </html>
