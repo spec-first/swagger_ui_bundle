@@ -12,10 +12,10 @@ def get_path(rel):
     )
 
 
-swagger_ui_4_12_0_path = get_path("vendor/swagger-ui-4.12.0")
+swagger_ui_4_14_0_path = get_path("vendor/swagger-ui-4.14.0")
 
 # latest major versions
-swagger_ui_4_path = swagger_ui_4_12_0_path
+swagger_ui_4_path = swagger_ui_4_14_0_path
 
 # default to swagger 4
 swagger_ui_path = swagger_ui_4_path
