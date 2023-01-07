@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py_swagger_ui"
-version = 'test'
+version = '1.0.0'
 description = "Swagger UI bundled for usage with Python"
 readme = "README.rst"
 keywords = ["swagger-ui"]
@@ -31,7 +31,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-Jinja2 = "^2.0"
+Jinja2 = "^3.0.0"
+importlib_resources = { version = "^5.7.1", python = "<3.9" }
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.1.3"
