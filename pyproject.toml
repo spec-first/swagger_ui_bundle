@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py_swagger_ui"
-version = "1.0.0"
+version = 'test'
 description = "Swagger UI bundled for usage with Python"
 readme = "README.rst"
 keywords = ["swagger-ui"]
