@@ -22,7 +22,9 @@ jobs:
       run: sed -i "s/version = .*/version = '${{github.ref_name}}'/" pyproject.toml
 
     - name: Build a binary wheel and a source tarball
-      run: poetry build
+      run: |
+        pip install poetry
+        poetry build
 
     - name: Publish distribution 📦 to Test PyPI
       if: github.event_name == 'push'
