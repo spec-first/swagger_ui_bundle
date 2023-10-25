@@ -1,5 +1,5 @@
-py_swagger_ui
-=============
+swagger_ui_bundle
+=================
 This package contains the static files for swagger-ui as a python package.
 
 Basic configuration options are templated with the Jinja2 templating language.
@@ -9,18 +9,18 @@ static files, and some very basic configuration.
 
 Getting Started
 ===============
-You can import the swagger_ui_path from the py_swagger_ui package like so:
+You can import the swagger_ui_path from the swagger_ui_bundle package like so:
 
 .. code-block:: python
   
-    from py_swagger_ui import swagger_ui_path
+    from swagger_ui_bundle import swagger_ui_path
 
 You can easily serve up this directory as all static files to get the default
 swagger-ui distribution. Here's an example in flask:
 
 .. code-block:: python
 
-    from py_swagger_ui import swagger_ui_path
+    from swagger_ui_bundle import swagger_ui_path
     
     from flask import Flask, Blueprint, send_from_directory, render_template
     

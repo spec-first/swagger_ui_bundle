@@ -1,1 +1,1 @@
-recursive-include py_swagger_ui/vendor *
+recursive-include swagger_ui_bundle/vendor *

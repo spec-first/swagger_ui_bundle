@@ -6,4 +6,4 @@ except ImportError:  # < Python 3.9
     import importlib.resources as importlib_resources
 
 
-swagger_ui_path: Path = importlib_resources.files("py_swagger_ui") / "vendor/swagger-ui-4.15.5"
+swagger_ui_path: Path = importlib_resources.files("swagger_ui_bundle") / "vendor/swagger-ui-4.15.5"
